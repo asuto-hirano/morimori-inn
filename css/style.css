@@ -293,6 +293,17 @@ p:last-child { margin-bottom: 0; }
 /* アクセス */
 .access-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
 .map-frame { border: 1px solid var(--line); background: var(--surface); padding: 10px; }
+
+/* Googleマップの埋め込み */
+.map-embed {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  background: var(--bg-tint);
+  overflow: hidden;
+}
+.map-embed iframe { display: block; width: 100%; height: 100%; border: 0; }
+.map-note { font-size: .84rem; margin-top: .8rem; }
+.map-note a::after { content: " ↗"; font-size: .9em; }
 .route { list-style: none; margin: 0; padding: 0; }
 .route li { position: relative; padding: 0 0 26px 30px; border-left: 1px solid var(--line); margin-left: 6px; }
 .route li:last-child { border-left-color: transparent; padding-bottom: 0; }

@@ -62,8 +62,21 @@
 <section class="section" style="padding-top:32px">
   <div class="container">
     <div class="access-grid">
-      <div class="map-frame reveal">
-        <img src="images/map.svg" alt="民宿もりもり周辺の概略地図。北に日本海、東に浦富海岸、南にJR岩美駅、西に鳥取砂丘方面があります。" width="1000" height="760">
+      <div class="reveal">
+        <!-- Googleマップの埋め込み（APIキー不要）。
+             ピンの位置を正確に合わせたいときは、Googleマップで場所を出して
+             「共有」→「地図を埋め込む」で得られる iframe の src に差し替えてください。 -->
+        <div class="map-embed">
+          <iframe
+            src="https://maps.google.com/maps?q=%E9%B3%A5%E5%8F%96%E7%9C%8C%E5%B2%A9%E7%BE%8E%E9%83%A1%E5%B2%A9%E7%BE%8E%E7%94%BA%E5%A4%A7%E8%B0%B7897-1&z=16&hl=ja&output=embed"
+            title="民宿もりもりの場所（Googleマップ）"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+        <p class="map-note">
+          <a href="https://www.google.com/maps/search/?api=1&query=%E9%B3%A5%E5%8F%96%E7%9C%8C%E5%B2%A9%E7%BE%8E%E9%83%A1%E5%B2%A9%E7%BE%8E%E7%94%BA%E5%A4%A7%E8%B0%B7897-1" target="_blank" rel="noopener">Googleマップで開く（経路を調べる）</a>
+        </p>
       </div>
       <div class="reveal">
         <h2>住所・連絡先</h2>
@@ -155,6 +168,10 @@
       <span class="en">Around</span>
       <h2>宿のまわり</h2>
     </div>
+    <div class="map-frame reveal" style="max-width:720px;margin:0 auto 2.6rem">
+      <img src="images/map.svg" alt="民宿もりもり周辺の概略地図。北に日本海、東に浦富海岸、南にJR岩美駅、西に鳥取砂丘方面があります。" width="1000" height="760">
+    </div>
+
     <div class="spot-grid reveal">
       <article class="spot">
         <span class="spot__dist">徒歩1分</span>
