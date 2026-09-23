@@ -130,7 +130,6 @@ p:last-child { margin-bottom: 0; }
 .nav__list a:hover::after,
 .nav__list a[aria-current="page"]::after { transform: scaleX(1); transform-origin: left; }
 
-.nav__tel { font-family: var(--serif); font-size: 1rem; letter-spacing: .06em; }
 
 /* ハンバーガー */
 .nav-toggle {
@@ -444,7 +443,6 @@ p:last-child { margin-bottom: 0; }
   .nav__list li:last-child { border-bottom: 0; }
   .nav__list a { display: block; padding: 1em .2em; font-size: .95rem; }
   .nav__list a::after { display: none; }
-  .nav__tel { padding-top: 1.2em; }
 }
 
 @media (max-width: 900px) {
