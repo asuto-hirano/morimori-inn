@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img" aria-label="電子レンジ・炊飯器・トースター・電気ケトルと食器が並ぶ台所のイラスト">
+  <rect width="800" height="800" fill="#eeeae0"/>
+  <rect y="520" width="800" height="280" fill="#d9d3c4"/>
+  <rect y="500" width="800" height="26" rx="4" fill="#c3bcab"/>
+  <g stroke="#cdc6b6" stroke-width="3">
+    <path d="M0 200 h800 M0 330 h800"/>
+    <path d="M200 60 v440 M400 60 v440 M600 60 v440"/>
+  </g>
+
+  <!-- 吊り棚 -->
+  <rect x="60" y="60" width="680" height="26" rx="5" fill="#a9835a"/>
+  <rect x="60" y="86" width="680" height="12" fill="#8a6a46"/>
+  <g>
+    <ellipse cx="170" cy="52" rx="44" ry="10" fill="#e8e2d2"/>
+    <ellipse cx="170" cy="44" rx="44" ry="10" fill="#f6f2e8"/>
+    <ellipse cx="170" cy="34" rx="44" ry="10" fill="#e8e2d2"/>
+    <ellipse cx="170" cy="26" rx="44" ry="10" fill="#f6f2e8"/>
+    <rect x="270" y="10" width="34" height="46" rx="5" fill="#2f4858"/>
+    <rect x="316" y="10" width="34" height="46" rx="5" fill="#7a8f6a"/>
+    <rect x="362" y="10" width="34" height="46" rx="5" fill="#b5543a"/>
+    <path d="M470 56 q-10 -50 26 -50 q36 0 26 50z" fill="#f6f2e8"/>
+    <path d="M540 56 q-10 -50 26 -50 q36 0 26 50z" fill="#e8e2d2"/>
+    <path d="M620 26 h60 v30 h-60z" fill="#8a9bab"/>
+  </g>
+
+  <!-- 電子レンジ -->
+  <g transform="translate(150 380)">
+    <rect x="-130" y="-90" width="260" height="130" rx="10" fill="#4a4a4a"/>
+    <rect x="-116" y="-76" width="170" height="102" rx="6" fill="#8fa3a8"/>
+    <rect x="-104" y="-64" width="146" height="78" rx="4" fill="#b7c6c9"/>
+    <circle cx="90" cy="-46" r="16" fill="#6e6e6e"/>
+    <rect x="72" y="-16" width="38" height="8" rx="4" fill="#6e6e6e"/>
+    <rect x="72" y="2" width="38" height="8" rx="4" fill="#6e6e6e"/>
+  </g>
+
+  <!-- 炊飯器 -->
+  <g transform="translate(440 400)">
+    <path d="M-86 20 q-10 -96 86 -96 q96 0 86 96z" fill="#e6e2d8"/>
+    <rect x="-92" y="14" width="184" height="30" rx="12" fill="#cfc9bb"/>
+    <rect x="-52" y="-52" width="104" height="26" rx="6" fill="#4a4a4a"/>
+    <circle cx="0" cy="-14" r="10" fill="#b5543a"/>
+    <g stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".65" fill="none">
+      <path d="M-30 -86 q-16 -26 0 -46"/><path d="M20 -90 q-14 -24 2 -42"/>
+    </g>
+  </g>
+
+  <!-- 電気ケトル -->
+  <g transform="translate(650 410)">
+    <path d="M-52 34 q-8 -84 52 -84 q60 0 52 84z" fill="#3b4750"/>
+    <rect x="-58" y="28" width="116" height="22" rx="9" fill="#2b343b"/>
+    <path d="M44 -26 q34 12 22 44" stroke="#3b4750" stroke-width="13" fill="none"/>
+    <path d="M-50 -46 l-28 -22 12 -16 32 24z" fill="#3b4750"/>
+    <rect x="-18" y="-64" width="36" height="14" rx="6" fill="#6e7a82"/>
+  </g>
+
+  <!-- トースター -->
+  <g transform="translate(300 600)">
+    <rect x="-96" y="-56" width="192" height="104" rx="10" fill="#6e7a82"/>
+    <rect x="-80" y="-42" width="130" height="76" rx="6" fill="#3b4750"/>
+    <rect x="-70" y="-32" width="110" height="56" rx="4" fill="#e0b25c"/>
+    <path d="M-46 -12 h60 v30 h-60z" fill="#c98e3f"/>
+    <circle cx="72" cy="-20" r="14" fill="#cfc9bb"/>
+    <rect x="58" y="8" width="28" height="8" rx="4" fill="#cfc9bb"/>
+  </g>
+
+  <!-- 食器 -->
+  <g transform="translate(600 620)">
+    <ellipse cx="0" cy="40" rx="96" ry="20" fill="#cfc9bb"/>
+    <ellipse cx="0" cy="24" rx="96" ry="20" fill="#f6f2e8"/>
+    <ellipse cx="0" cy="8" rx="84" ry="18" fill="#e8e2d2"/>
+    <ellipse cx="0" cy="-6" rx="84" ry="18" fill="#f6f2e8"/>
+    <g transform="translate(96 -10)">
+      <path d="M-26 22 q-8 -46 26 -46 q34 0 26 46z" fill="#f6f2e8"/>
+      <path d="M22 0 q22 4 16 20" stroke="#f6f2e8" stroke-width="8" fill="none"/>
+    </g>
+  </g>
+</svg>

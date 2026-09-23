@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ご予約・お問い合わせ｜民宿 もりもり</title>
+<meta name="description" content="空室のご確認、人数やBBQのご相談を承ります。最大8名、チェックイン15時、お支払いは事前振込。お電話（090-3632-5155）でも受け付けています。">
+<meta property="og:title" content="ご予約・お問い合わせ｜民宿 もりもり">
+<meta property="og:description" content="空室のご確認、人数やBBQのご相談を承ります。最大8名、チェックイン15時、お支払いは事前振込。お電話（090-3632-5155）でも受け付けています。">
+<meta property="og:type" content="website">
+<meta property="og:image" content="images/photo-exterior.jpg">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="logo" href="index.html">
+      民宿 もりもり
+      <span class="logo__sub">MORIMORI INN</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="global-nav">
+      <span></span><span></span><span></span>
+      <span class="visually-hidden">メニューを開く</span>
+    </button>
+
+    <nav class="nav" id="global-nav" aria-label="メインメニュー">
+      <ul class="nav__list">
+        <li><a href="index.html">ホーム</a></li>
+        <li><a href="house.html">宿のご案内・料金</a></li>
+        <li><a href="bbq.html">BBQ・お食事</a></li>
+        <li><a href="access.html">アクセス</a></li>
+        <li><a href="contact.html" aria-current="page">ご予約・お問い合わせ</a></li>
+        <li class="nav__tel"><a href="tel:09036325155">090-3632-5155</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+<div class="page-head">
+  <div class="container">
+    <span class="en">Contact</span>
+    <h1>ご予約・お問い合わせ</h1>
+    <p>1日1組限定です。日程はお早めにご相談ください。</p>
+  </div>
+</div>
+
+<nav class="breadcrumb container" aria-label="現在地">
+  <ol>
+    <li><a href="index.html">ホーム</a></li>
+    <li>ご予約・お問い合わせ</li>
+  </ol>
+</nav>
+
+<section class="section" style="padding-top:32px">
+  <div class="container">
+    <div class="form-layout">
+
+      <div>
+        <div class="form-result" id="form-result" role="status" aria-live="polite"></div>
+
+        <form class="form" id="reserve-form" novalidate>
+          <p style="font-size:.88rem;color:var(--ink-sub);margin-bottom:1.8rem">
+            以下は<strong>仮予約のお申し込み</strong>です。折り返し、空室状況と料金、お振込先をご連絡いたします。
+            この時点では予約は確定しません。
+          </p>
+
+          <div class="field">
+            <label for="f-name">お名前<span class="required">必須</span></label>
+            <input type="text" id="f-name" name="name" required autocomplete="name" placeholder="山田 太郎">
+            <p class="field__error">お名前をご入力ください。</p>
+          </div>
+
+          <div class="field">
+            <label for="f-kana">ふりがな<span class="optional">任意</span></label>
+            <input type="text" id="f-kana" name="kana" placeholder="やまだ たろう">
+          </div>
+
+          <div class="field__row">
+            <div class="field">
+              <label for="f-email">メールアドレス<span class="required">必須</span></label>
+              <input type="email" id="f-email" name="email" required autocomplete="email" placeholder="example@example.com">
+              <p class="field__error">メールアドレスの形式をご確認ください。</p>
+            </div>
+            <div class="field">
+              <label for="f-tel">電話番号<span class="required">必須</span></label>
+              <input type="tel" id="f-tel" name="tel" required autocomplete="tel" pattern="[0-9+\-\(\) ]{9,20}" placeholder="090-0000-0000">
+              <p class="field__error">電話番号を数字でご入力ください。</p>
+            </div>
+          </div>
+
+          <div class="field__row">
+            <div class="field">
+              <label for="f-checkin">ご宿泊日<span class="required">必須</span></label>
+              <input type="date" id="f-checkin" name="checkin" required>
+              <p class="field__error">ご宿泊日をご指定ください。</p>
+            </div>
+            <div class="field">
+              <label for="f-nights">泊数<span class="required">必須</span></label>
+              <select id="f-nights" name="nights" required>
+                <option value="1">1泊</option>
+                <option value="2">2泊</option>
+                <option value="3">3泊</option>
+                <option value="4">4泊</option>
+                <option value="5">5泊以上</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field__row">
+            <div class="field">
+              <label for="f-people">ご宿泊人数<span class="required">必須</span></label>
+              <input type="number" id="f-people" name="people" required min="1" max="8" value="5" inputmode="numeric">
+              <p class="field__hint">定員は8名です。未就学のお子さまは含めずにご入力ください。</p>
+              <p class="field__error">1〜8名の範囲でご入力ください。</p>
+            </div>
+            <div class="field">
+              <label for="f-kids">未就学児の人数<span class="optional">任意</span></label>
+              <input type="number" id="f-kids" name="kids" min="0" max="8" value="0" inputmode="numeric">
+              <p class="field__hint">未就学のお子さまは無料です。</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <span class="field__label">BBQのご利用<span class="required">必須</span></span>
+            <div class="radio-group">
+              <label><input type="radio" name="bbq" value="利用したい" checked>利用したい</label>
+              <label><input type="radio" name="bbq" value="利用しない">利用しない</label>
+              <label><input type="radio" name="bbq" value="検討中">検討中</label>
+            </div>
+            <p class="field__hint">BBQセットは無料でお貸しします。炭と食材はお持ちください。</p>
+          </div>
+
+          <div class="field__row">
+            <div class="field">
+              <label for="f-cars">お車の台数<span class="optional">任意</span></label>
+              <input type="number" id="f-cars" name="cars" min="0" max="10" value="1" inputmode="numeric">
+              <p class="field__hint">駐車場は3台です。超える場合はご相談ください。</p>
+            </div>
+            <div class="field">
+              <label for="f-arrival">到着予定の時刻<span class="optional">任意</span></label>
+              <input type="text" id="f-arrival" name="arrival" placeholder="16時ごろ">
+              <p class="field__hint">チェックインは15:00からです。</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="f-message">ご要望・ご質問<span class="optional">任意</span></label>
+            <textarea id="f-message" name="message" placeholder="お子さまの年齢、設備についてのご質問などをご記入ください。"></textarea>
+          </div>
+
+          <div class="form__submit">
+            <button class="btn" type="submit">入力内容を確認する</button>
+          </div>
+        </form>
+      </div>
+
+      <aside class="contact-side">
+        <div class="note">
+          <h3>お電話でのご予約</h3>
+          <p style="margin-bottom:.4em"><a class="tel-big" href="tel:09036325155">090-3632-5155</a></p>
+          <p>出られないことがありますので、その場合は時間をおいておかけ直しいただくか、
+            このページのフォームをご利用ください。</p>
+        </div>
+
+        <div class="note">
+          <h3>料金の目安</h3>
+          <p>
+            5名まで 1泊 50,000円（1棟）<br>
+            6名目から 1名につき +5,000円<br>
+            未就学児は無料・定員8名
+          </p>
+          <p style="margin-top:.6em"><a href="house.html#calc">人数から料金を計算する</a></p>
+        </div>
+
+        <div class="note">
+          <h3>お支払いについて</h3>
+          <p>お支払いは<strong>事前振込</strong>です。
+            <strong>ご予約から2日以内</strong>にお振り込みください。
+            入金が確認できない場合は、自動的にキャンセルとさせていただきます。</p>
+          <p style="margin-top:.6em"><a href="#flow">ご予約の流れを見る</a></p>
+        </div>
+
+        <div class="note">
+          <h3>このフォームについて</h3>
+          <p>このサイトは送信サーバーを持たない静的サイトです。
+            「入力内容を確認する」を押すと入力内容がまとまりますので、
+            表示されるボタンでコピーして、お電話やメッセージでお送りください。</p>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<section class="section section--tint" id="flow">
+  <div class="container" style="max-width:860px">
+    <div class="section-title reveal">
+      <span class="en">Reservation Flow</span>
+      <h2>ご予約の流れ</h2>
+    </div>
+
+    <ul class="route reveal">
+      <li>
+        <h3>1. お問い合わせ</h3>
+        <p>このページのフォーム、またはお電話でご希望の日程と人数をお知らせください。空室状況と料金をご連絡します。</p>
+      </li>
+      <li>
+        <h3>2. 仮予約・お振込先のご案内</h3>
+        <p>内容を確認したうえで、お振込先をご案内します。この時点ではまだ予約は確定していません。</p>
+      </li>
+      <li>
+        <h3>3. お振り込み（ご予約から2日以内）</h3>
+        <p><strong>ご予約から2日以内にご入金をお願いします。</strong>期日までに入金が確認できない場合は、自動的にキャンセルとさせていただきます。</p>
+      </li>
+      <li>
+        <h3>4. 予約の確定</h3>
+        <p>入金を確認し、<strong>予約確定のご連絡をお送りした時点で予約成立</strong>となります。</p>
+      </li>
+    </ul>
+
+    <div class="section-title reveal" style="margin-top:4rem">
+      <span class="en">Cancellation</span>
+      <h2 id="cancel">キャンセル規定</h2>
+    </div>
+
+    <div class="table-wrap reveal">
+      <table class="table">
+        <caption class="visually-hidden">キャンセルの時期と、いただくキャンセル料</caption>
+        <thead>
+          <tr>
+            <th scope="col">キャンセルの時期</th>
+            <th scope="col">キャンセル料</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">14日前まで</th><td class="num">無料</td></tr>
+          <tr><th scope="row">13日前〜3日前</th><td class="num">宿泊料金の50%</td></tr>
+          <tr><th scope="row">2日前〜当日</th><td class="num">宿泊料金の100%</td></tr>
+          <tr><th scope="row">ご連絡のないキャンセル</th><td class="num">宿泊料金の100%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="reveal" style="font-size:.84rem;color:var(--ink-mute);margin-top:.8rem">
+      ※ご宿泊日の2週間前（14日前）までにご連絡いただければ、キャンセル料はかかりません。<br>
+      ※ご入金前に期日を過ぎて自動キャンセルとなった場合も、キャンセル料はかかりません。<br>
+      ※ご返金の方法や振込手数料の取り扱いについては、個別にご案内します。
+    </p>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="container" style="max-width:800px">
+    <div class="section-title reveal">
+      <span class="en">FAQ</span>
+      <h2>よくあるご質問</h2>
+    </div>
+
+    <div class="faq reveal">
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a1">海までどのくらいですか？</button>
+        <div class="faq__a" id="a1"><p>大谷海岸が目の前です。歩いて1分ほどで海に入れます。泳いで戻ってきて、そのままデッキでBBQ、という過ごし方ができます。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a13">プールは使えますか？</button>
+        <div class="faq__a" id="a13"><p>デッキのプールは自由にお使いいただけますが、水を張るのに約10時間かかるため、<strong>2泊以上のお客さま限定</strong>とさせていただいています。ご利用を希望される場合は、ご予約のときにお知らせください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a2">何名まで泊まれますか？</button>
+        <div class="faq__a" id="a2"><p>最大8名です。未就学のお子さまは無料で、料金の人数には数えません。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a3">料金はどのように決まりますか？</button>
+        <div class="faq__a" id="a3"><p>1棟あたりの料金です。5名までは人数にかかわらず1泊50,000円、6名目からは1名につき1泊5,000円を加算します。7名なら60,000円、8名なら65,000円です。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a4">支払い方法を教えてください。</button>
+        <div class="faq__a" id="a4"><p>事前振込でお願いしています。ご予約から2日以内にお振り込みください。期日までに入金が確認できない場合は自動的にキャンセルとなります。入金を確認し、確定のご連絡をお送りした時点で予約成立です。詳しくは<a href="#flow">ご予約の流れ</a>をご覧ください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a14">キャンセル料はかかりますか？</button>
+        <div class="faq__a" id="a14"><p><strong>2週間前（14日前）までのご連絡なら無料</strong>です。13日前から3日前までは宿泊料金の50%、2日前から当日は100%、ご連絡のないキャンセルは100%をいただいています。詳しくは<a href="#cancel">キャンセル規定</a>をご覧ください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a5">チェックインとチェックアウトの時刻は？</button>
+        <div class="faq__a" id="a5"><p>チェックインは15:00、チェックアウトは10:00です。到着が遅くなる場合は、お手数ですがお電話でお知らせください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a6">食事は出ますか？台所は使えますか？</button>
+        <div class="faq__a" id="a6"><p>お食事の提供はありません。台所には食器と調理家電（電子レンジ、炊飯器、トースター、電気ケトル）がありますので、買ってきたものを温めたり、ご飯を炊いたりしていただけます。持ち込みは自由です。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a7">BBQには何を持っていけばよいですか？</button>
+        <div class="faq__a" id="a7"><p>BBQセット（コンロや網など）は宿から無料でお貸しします。<strong>炭・着火剤・食材・飲み物・使い捨て食器はお持ちください。</strong>詳しくは<a href="bbq.html">BBQ・お食事</a>のページをご覧ください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a8">Wi-Fiはありますか？</button>
+        <div class="faq__a" id="a8"><p>ありません。お仕事などで通信が必要な方は、ご自身の回線をご用意ください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a9">駐車場はありますか？</button>
+        <div class="faq__a" id="a9"><p>3台分あります（無料）。4台以上でお越しの場合は、あらかじめご相談ください。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a10">アメニティは何がありますか？</button>
+        <div class="faq__a" id="a10"><p>ハンドソープ、ボディソープ、シャンプー、リンスをご用意しています。タオル・歯ブラシについては現在確認中ですので、お持ちいただくと確実です。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a11">アニメ「Free!」に出てきた家だと聞きました。</button>
+        <div class="faq__a" id="a11"><p>岩美町は「Free!」の舞台のモデルになった町で、この家も作中に登場しました。聖地巡礼でお越しの方にもご利用いただいています。なお、当宿は作品の公式施設ではありません。近隣のお住まいの方へのご配慮をお願いします。</p></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__q" type="button" aria-expanded="false" aria-controls="a12">間取りや寝具について知りたいです。</button>
+        <div class="faq__a" id="a12"><p>間取り、寝具の数、冷蔵庫や洗濯機などの詳細は現在整理中です。お手数ですが、お電話（<a href="tel:09036325155">090-3632-5155</a>）でご確認ください。決まりしだいサイトに掲載します。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <p class="footer__logo">民宿 もりもり</p>
+        <p>
+          鳥取県岩美郡岩美町大谷897-1<br>
+          TEL <a href="tel:09036325155">090-3632-5155</a>
+        </p>
+      </div>
+      <div>
+        <h3>メニュー</h3>
+        <ul>
+          <li><a href="index.html">ホーム</a></li>
+          <li><a href="house.html">宿のご案内・料金</a></li>
+          <li><a href="bbq.html">BBQ・お食事</a></li>
+          <li><a href="access.html">アクセス</a></li>
+          <li><a href="contact.html">ご予約・お問い合わせ</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>ご利用案内</h3>
+        <ul>
+          <li>一軒家まるごと1日1組限定</li>
+          <li>5名まで 1泊 50,000円</li>
+          <li>6名目から 1名 +5,000円</li>
+          <li>お食事の提供はありません</li>
+          <li>BBQセットを無料で貸し出し</li>
+        </ul>
+      </div>
+    </div>
+    <p class="footer__copy">
+      &copy; <span id="year">2026</span> 民宿 もりもり　|　掲載の写真はイラストによる仮のイメージです。
+    </p>
+  </div>
+</footer>
+</body>
+</html>

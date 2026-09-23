@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 600" width="1600" height="600" role="img" aria-label="夕暮れの海岸のイラスト">
+  <defs>
+    <linearGradient id="cgrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5d7a83"/><stop offset="100%" stop-color="#22343c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="600" fill="url(#cgrad)"/>
+  <circle cx="1180" cy="170" r="70" fill="#e8d6ad" opacity=".28"/>
+  <path d="M0 250 L180 170 L340 246 L520 190 L700 252 L880 200 L1060 254 L1240 196 L1420 250 L1600 210 L1600 300 L0 300 Z" fill="#3c525a" opacity=".8"/>
+  <rect y="290" width="1600" height="310" fill="#2c4149"/>
+  <g fill="#ffffff" opacity=".12">
+    <path d="M100 340 q80 -14 160 0 t160 0 v10 q-80 14 -160 0 t-160 0z"/>
+    <path d="M760 380 q80 -14 160 0 t160 0 v10 q-80 14 -160 0 t-160 0z"/>
+    <path d="M300 450 q90 -16 180 0 t180 0 v11 q-90 16 -180 0 t-180 0z"/>
+    <path d="M1080 480 q90 -16 180 0 t180 0 v11 q-90 16 -180 0 t-180 0z"/>
+  </g>
+  <path d="M1120 290 L1240 290 L1400 600 L960 600 Z" fill="#e8d6ad" opacity=".1"/>
+  <path d="M0 600 L0 420 q160 -50 300 -10 q120 34 160 190 Z" fill="#1c2b31"/>
+  <path d="M1600 600 L1600 440 q-170 -46 -300 0 q-120 40 -150 160 Z" fill="#1c2b31"/>
+</svg>
