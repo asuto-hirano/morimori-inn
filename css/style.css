@@ -195,6 +195,12 @@ p:last-child { margin-bottom: 0; }
 .footer h3 { color: #fff; font-size: .95rem; letter-spacing: .12em; margin-bottom: .8em; }
 .footer ul { list-style: none; margin: 0; padding: 0; }
 .footer li { margin-bottom: .5em; }
+.footer__policy {
+  margin-top: 40px; padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,.18);
+  font-size: .76rem; line-height: 1.8; color: #a9b8c1;
+}
+.footer__policy + .footer__copy { margin-top: 16px; padding-top: 0; border-top: 0; }
 .footer__copy { margin-top: 48px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.18); text-align: center; font-size: .75rem; color: #a9b8c1; }
 
 /* スクロールで現れるアニメーション（JSが .is-visible を付与） */
